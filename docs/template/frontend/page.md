@@ -24,9 +24,8 @@ Describe the layout and sections of the page. Use bullet points or visuals.
 
 ---
 
-## ⚙️ Functionality
 
-### 🛠️ Features
+## 🛠️ Features
 
 List the key features this page supports, such as forms, buttons, or modals.
 
@@ -34,25 +33,18 @@ List the key features this page supports, such as forms, buttons, or modals.
 - **Login Form**: Accepts email and password for authentication.
 - **Registration Form**: Allows new users to create an account.
 - **Password Reset**: Users can request a password reset via email.
-
-### 🧩 Dependencies / External Libraries
-
-Mention any important dependencies that are directly related to the page’s functionality.
-
-**Example:**
-- `react-router-dom` for navigation between pages.
-- `formik` for handling form submission.
-
-
 ---
 
-## 🖼️ Visuals
+## 🔃 Functions
 
-(Optional) Include screenshots or diagrams of the page layout.
+Explain how the key functions or logic flow inside the page. This helps devs understand what gets called and when.
 
-```md
-![Login Page](./assets/login-page.png)
-```
+### Example:
+#### `handleLogin()`
+1. Triggered when user clicks "Login" button
+2. Calls signInWithEmail() from authService.ts
+3. If successful → redirect to /dashboard
+4. If failed → show toast error message.
 
 ---
 
@@ -64,3 +56,11 @@ Mention any important dependencies that are directly related to the page’s fun
 **Example:**
 - The form validation can be improved by integrating `yup`.
 - Add an auto-redirect feature after successful login.
+
+--- 
+## 📂 Related Files
+
+| File Path | Purpose |
+|-----------|---------|
+| [`/src/pages/LoginPage.tsx`](../src/pages/LoginPage.tsx) | Main page entry point |
+| [`/src/components/forms/LoginForm.tsx`](../src/components/forms/LoginForm.tsx) | Form UI logic |
